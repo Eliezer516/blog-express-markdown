@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= metadata.title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/github-markdown.css">
+	<link rel="stylesheet" href="/highlight/styles/a11y-dark.min.css">
+</head>
+<body>
+	<main>
+		<div class="markdown-body">
+			<%- contenido %>
+		</div>
+	</main>
+	<script src="/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</body>
+</html>

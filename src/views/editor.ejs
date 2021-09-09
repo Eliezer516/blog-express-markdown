@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creando publicacion </title>
+	<link rel="stylesheet" href="/css/mdeditor.css">
+	<link rel="stylesheet" href="/css/github-markdown.css">
+	<link rel="stylesheet" href="/highlight/styles/a11y-dark.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<main>
+		<section class="editor-container">
+			<form action="/make-post" method="post">
+				<div class="editor">
+					<div class="card_container">
+						<div class="form-controll">
+							<input type="text" name="titulo" placeholder="Titulo del post">
+							<button type="submit">Enviar</button>
+						</div>
+						<textarea name="editor" id="editor"></textarea>
+					</div>
+					<!-- <div id="editor"></div> -->
+					<div class="markdownparsed markdown-body"></div>
+				</div>
+			</form>
+		</section>
+		<script src="/js/marked.js"></script>
+		<script src="/highlight/highlight.min.js"></script>
+		<script src="/js/main.js"></script>
+	</main>
+</body>
+</html>
+
