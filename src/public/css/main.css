@@ -47,3 +47,18 @@ nav .logo {
 .post_links img {
 	width: 100%;
 }
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.post-container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+@media (max-width: 911px) {
+	.post-container {
+		width: 95%
+	}
+}

@@ -1,8 +1,26 @@
+:root{
+	--primario:  #1976D2;
+}
 .editor-container {
 	width: 100%;
 }
 
+.blur-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 20;
+}
+
+.blur-box.blur-activo{
+	display: none;
+}
+
 .editor-container form .editor{
+	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -13,6 +31,7 @@
 	width: 50%;
 	height: 100vh;
 	padding: 20px;
+	overflow: auto;
 }
 
 .card_container {
@@ -34,23 +53,31 @@
 .card_container #editor:focus {
 	border: 1px solid #2eb7ed;
 } 
-.card_container input[type="text"] {
-	width: 80%;
-	padding: 10px;
-	margin-right: 5px;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	outline: none;
+
+.form-controll{
+	background: var(--primario);
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	z-index: 30;
 }
 
-.card_container button {
-	width: 20%;
-	margin: 0;
-}
-
-.form-controll {
-	width: 100%;
+.form-controll.form-controll-hide{
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: flex;
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	margin-bottom: 5px;
+	z-index: 30;
+}
+.form-controll input[type="text"], .form-controll button {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	outline: none;
 }

@@ -20,15 +20,23 @@
 	</header>
 	<main>
 		<div class="post_links">
-			<% data.forEach( ({title, slug, img}) => {  %>
+			<% data.forEach( ({title, slug, postImg}) => {  %>
 				<a href="/posts/<%= slug %>">
-					<img src="<%= img %>" alt="<%= title %>">
+					<img src="<%= postImg %>" alt="<%= title %>">
 					<h3><%= title %></h3>
 				</a>
 			<% } ) %>
 		</div>
 	</main>
 	<script src="/reload/reload.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+	<script>
+	  function addDarkmodeWidget() {
+	    new Darkmode().showWidget();
+	  }
+	  window.addEventListener('load', addDarkmodeWidget);
+	</script>
+	<script>hljs.highlightAll();</script>
 </body>
 </html>
 

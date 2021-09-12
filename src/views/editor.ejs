@@ -12,16 +12,18 @@
 <body>
 	<main>
 		<section class="editor-container">
-			<form action="/make-post" method="post">
+			<div class="blur-box"></div>
+			<form action="/admin/make-post" method="post">
 				<div class="editor">
 					<div class="card_container">
 						<div class="form-controll">
-							<input type="text" name="titulo" placeholder="Titulo del post">
+							<div class="cerrar">X</div>
+							<input type="text" name="titulo" placeholder="Titulo del post" require>
+							<input type="text" name="imagen" placeholder="Imagen del post" require>
 							<button type="submit">Enviar</button>
 						</div>
 						<textarea name="editor" id="editor"></textarea>
 					</div>
-					<!-- <div id="editor"></div> -->
 					<div class="markdownparsed markdown-body"></div>
 				</div>
 			</form>
